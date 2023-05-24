@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Psikotest App - HR Consult Test</title>
+
+</head>
+<body>
+  <h1>List of Question</h1>
+  <tabel>
+    <th>
+      <tr>ID</tr>
+      <tr>Question</tr>
+      <tr>Category</tr>
+      <tr>Option 1</tr>
+      <tr>Option 2</tr>
+      <tr>Option 3</tr>
+      <tr>Option 4</tr>
+      <tr>Answer</tr>
+    </th>
+    <tb th:each="question : ${allQuestions}">
+      <div>
+        <td th:text="${question.id}">1</td>
+        <td th:text="${question.question}">Jawab lah pertanyaan berikut</td>
+        <td th:text="${question.category}">PERSONALITY</td>
+        <td th:text="${question.option1}">A. Lari</td>
+        <td th:text="${question.option2}">B. Renang</td>
+        <td th:text="${question.option3}">C. Lempar</td>
+        <td th:text="${question.option4}">D. Daki</td>
+        <td th:text="${question.answer}">A</td>
+      </div>
+    </tb>
+  </tabel>
+</body>
+</html>
